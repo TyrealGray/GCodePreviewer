@@ -4,13 +4,13 @@ import * as THREE from 'three';
 class GCodeObjectManager {
     private gcodeLoader: GCodeLoader;
     constructor() {
-        const manager = new THREE.LoadingManager();
+        const manager = THREE.DefaultLoadingManager;
         this.gcodeLoader = new GCodeLoader(manager);
     }
 
-    public async loadGCode(url: string) {
+    public async loadGCode(url: string): Promise<THREE.Group | undefined> {
         const gcodeObject = await this.gcodeLoader.loadAsync(url);
-        return gcodeObject;
+        return gcodeObject as THREE.Group;
     }
 }
 

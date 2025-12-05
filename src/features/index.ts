@@ -1,1 +1,1 @@
-export * from './PreviewMode';
+export * from './UploadedFile';

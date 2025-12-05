@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import previewModeReducer from "../features/PreviewMode/previewModeSlice";
+import uploadedFileSlice from "../features/UploadedFile/uploadedFileSlice";
 
 export default configureStore({
     reducer: {
-        previewMode: previewModeReducer
+        gcodeFile: uploadedFileSlice
     }
 });
