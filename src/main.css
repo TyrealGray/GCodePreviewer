@@ -2,7 +2,7 @@
 
 #root {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 100vh;
     background-color: var(--color-gray-800);
 }

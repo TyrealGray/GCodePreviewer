@@ -28,7 +28,7 @@ function MenuList({ isPending }: { isPending: boolean }) {
                 setInputText('GCode file loaded');
                 dispatch(setFile(path));
             };
-            reader.readAsDataURL(file);
+            reader.readAsText(file);
         }
     };
 

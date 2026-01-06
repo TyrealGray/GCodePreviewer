@@ -1,6 +1,7 @@
 import { useTransition } from 'react';
 import MenuList from './MenuList/MenuList';
 import Viewer3D from './Viewer3D/Viewer3D';
+import TravelControl from './TravelControl/TravelControl';
 import { useSelector } from 'react-redux';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   const [isPending, startTransition] = useTransition();
 
   return (
+    <>
     <div className="flex flex-row basis-full">
       <div className="basis-1/3 text-white">
         <MenuList isPending={isPending} />
@@ -18,6 +20,8 @@ function App() {
         <Viewer3D className={isGcodeFileSelected? 'block': 'hidden'} startTransition={startTransition}/>
       </div>
     </div>
+    <TravelControl className={isGcodeFileSelected? 'block': 'hidden'} />
+    </>
   );
 }
 

@@ -4,4 +4,4 @@ GCodePreviewer is a web application that allows users to preview 3D models gener
 
 It uses Three.js for rendering and React for the user interface.
 
-![screenshot](screenshot.png)
+![screenshot](screenshot.gif)
